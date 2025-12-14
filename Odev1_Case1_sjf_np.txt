@@ -1,0 +1,423 @@
+Algorithm: SJF Non-Preemptive
+
+Zaman Tablosu:
+[ 0.000 ] - - P001 - - [ 1.000 ]
+[ 1.000 ] - - IDLE - - [ 2.000 ]
+[ 2.000 ] - - P002 - - [ 4.000 ]
+[ 4.000 ] - - P003 - - [ 7.000 ]
+[ 7.000 ] - - P004 - - [ 11.000 ]
+[ 11.000 ] - - P005 - - [ 16.000 ]
+[ 16.000 ] - - P006 - - [ 22.000 ]
+[ 22.000 ] - - P007 - - [ 29.000 ]
+[ 29.000 ] - - P008 - - [ 37.000 ]
+[ 37.000 ] - - P009 - - [ 46.000 ]
+[ 46.000 ] - - P021 - - [ 47.000 ]
+[ 47.000 ] - - P022 - - [ 49.000 ]
+[ 49.000 ] - - P023 - - [ 52.000 ]
+[ 52.000 ] - - P024 - - [ 56.000 ]
+[ 56.000 ] - - P025 - - [ 61.000 ]
+[ 61.000 ] - - P026 - - [ 67.000 ]
+[ 67.000 ] - - P027 - - [ 74.000 ]
+[ 74.000 ] - - P028 - - [ 82.000 ]
+[ 82.000 ] - - P041 - - [ 83.000 ]
+[ 83.000 ] - - P042 - - [ 85.000 ]
+[ 85.000 ] - - P043 - - [ 88.000 ]
+[ 88.000 ] - - P044 - - [ 92.000 ]
+[ 92.000 ] - - P045 - - [ 97.000 ]
+[ 97.000 ] - - P046 - - [ 103.000 ]
+[ 103.000 ] - - P047 - - [ 110.000 ]
+[ 110.000 ] - - P048 - - [ 118.000 ]
+[ 118.000 ] - - P029 - - [ 127.000 ]
+[ 127.000 ] - - P061 - - [ 128.000 ]
+[ 128.000 ] - - P062 - - [ 130.000 ]
+[ 130.000 ] - - P063 - - [ 133.000 ]
+[ 133.000 ] - - P064 - - [ 137.000 ]
+[ 137.000 ] - - P065 - - [ 142.000 ]
+[ 142.000 ] - - P066 - - [ 148.000 ]
+[ 148.000 ] - - P067 - - [ 155.000 ]
+[ 155.000 ] - - P068 - - [ 163.000 ]
+[ 163.000 ] - - P081 - - [ 164.000 ]
+[ 164.000 ] - - P082 - - [ 166.000 ]
+[ 166.000 ] - - P083 - - [ 169.000 ]
+[ 169.000 ] - - P084 - - [ 173.000 ]
+[ 173.000 ] - - P085 - - [ 178.000 ]
+[ 178.000 ] - - P086 - - [ 184.000 ]
+[ 184.000 ] - - P087 - - [ 191.000 ]
+[ 191.000 ] - - P088 - - [ 199.000 ]
+[ 199.000 ] - - P049 - - [ 208.000 ]
+[ 208.000 ] - - P101 - - [ 209.000 ]
+[ 209.000 ] - - P102 - - [ 211.000 ]
+[ 211.000 ] - - P103 - - [ 214.000 ]
+[ 214.000 ] - - P104 - - [ 218.000 ]
+[ 218.000 ] - - P105 - - [ 223.000 ]
+[ 223.000 ] - - P106 - - [ 229.000 ]
+[ 229.000 ] - - P107 - - [ 236.000 ]
+[ 236.000 ] - - P108 - - [ 244.000 ]
+[ 244.000 ] - - P121 - - [ 245.000 ]
+[ 245.000 ] - - P122 - - [ 247.000 ]
+[ 247.000 ] - - P123 - - [ 250.000 ]
+[ 250.000 ] - - P124 - - [ 254.000 ]
+[ 254.000 ] - - P125 - - [ 259.000 ]
+[ 259.000 ] - - P126 - - [ 265.000 ]
+[ 265.000 ] - - P127 - - [ 272.000 ]
+[ 272.000 ] - - P128 - - [ 280.000 ]
+[ 280.000 ] - - P141 - - [ 281.000 ]
+[ 281.000 ] - - P069 - - [ 290.000 ]
+[ 290.000 ] - - P142 - - [ 292.000 ]
+[ 292.000 ] - - P143 - - [ 295.000 ]
+[ 295.000 ] - - P144 - - [ 299.000 ]
+[ 299.000 ] - - P145 - - [ 304.000 ]
+[ 304.000 ] - - P146 - - [ 310.000 ]
+[ 310.000 ] - - P147 - - [ 317.000 ]
+[ 317.000 ] - - P148 - - [ 325.000 ]
+[ 325.000 ] - - P161 - - [ 326.000 ]
+[ 326.000 ] - - P162 - - [ 328.000 ]
+[ 328.000 ] - - P163 - - [ 331.000 ]
+[ 331.000 ] - - P164 - - [ 335.000 ]
+[ 335.000 ] - - P165 - - [ 340.000 ]
+[ 340.000 ] - - P166 - - [ 346.000 ]
+[ 346.000 ] - - P167 - - [ 353.000 ]
+[ 353.000 ] - - P168 - - [ 361.000 ]
+[ 361.000 ] - - P181 - - [ 362.000 ]
+[ 362.000 ] - - P182 - - [ 364.000 ]
+[ 364.000 ] - - P183 - - [ 367.000 ]
+[ 367.000 ] - - P184 - - [ 371.000 ]
+[ 371.000 ] - - P185 - - [ 376.000 ]
+[ 376.000 ] - - P186 - - [ 382.000 ]
+[ 382.000 ] - - P187 - - [ 389.000 ]
+[ 389.000 ] - - P188 - - [ 397.000 ]
+[ 397.000 ] - - P089 - - [ 406.000 ]
+[ 406.000 ] - - P109 - - [ 415.000 ]
+[ 415.000 ] - - P129 - - [ 424.000 ]
+[ 424.000 ] - - P149 - - [ 433.000 ]
+[ 433.000 ] - - P169 - - [ 442.000 ]
+[ 442.000 ] - - P189 - - [ 451.000 ]
+[ 451.000 ] - - P010 - - [ 461.000 ]
+[ 461.000 ] - - P030 - - [ 471.000 ]
+[ 471.000 ] - - P050 - - [ 481.000 ]
+[ 481.000 ] - - P070 - - [ 491.000 ]
+[ 491.000 ] - - P090 - - [ 501.000 ]
+[ 501.000 ] - - P110 - - [ 511.000 ]
+[ 511.000 ] - - P130 - - [ 521.000 ]
+[ 521.000 ] - - P150 - - [ 531.000 ]
+[ 531.000 ] - - P170 - - [ 541.000 ]
+[ 541.000 ] - - P190 - - [ 551.000 ]
+[ 551.000 ] - - P011 - - [ 562.000 ]
+[ 562.000 ] - - P031 - - [ 573.000 ]
+[ 573.000 ] - - P051 - - [ 584.000 ]
+[ 584.000 ] - - P071 - - [ 595.000 ]
+[ 595.000 ] - - P091 - - [ 606.000 ]
+[ 606.000 ] - - P111 - - [ 617.000 ]
+[ 617.000 ] - - P131 - - [ 628.000 ]
+[ 628.000 ] - - P151 - - [ 639.000 ]
+[ 639.000 ] - - P171 - - [ 650.000 ]
+[ 650.000 ] - - P191 - - [ 661.000 ]
+[ 661.000 ] - - P012 - - [ 673.000 ]
+[ 673.000 ] - - P032 - - [ 685.000 ]
+[ 685.000 ] - - P052 - - [ 697.000 ]
+[ 697.000 ] - - P072 - - [ 709.000 ]
+[ 709.000 ] - - P092 - - [ 721.000 ]
+[ 721.000 ] - - P112 - - [ 733.000 ]
+[ 733.000 ] - - P132 - - [ 745.000 ]
+[ 745.000 ] - - P152 - - [ 757.000 ]
+[ 757.000 ] - - P172 - - [ 769.000 ]
+[ 769.000 ] - - P192 - - [ 781.000 ]
+[ 781.000 ] - - P013 - - [ 794.000 ]
+[ 794.000 ] - - P033 - - [ 807.000 ]
+[ 807.000 ] - - P053 - - [ 820.000 ]
+[ 820.000 ] - - P073 - - [ 833.000 ]
+[ 833.000 ] - - P093 - - [ 846.000 ]
+[ 846.000 ] - - P113 - - [ 859.000 ]
+[ 859.000 ] - - P133 - - [ 872.000 ]
+[ 872.000 ] - - P153 - - [ 885.000 ]
+[ 885.000 ] - - P173 - - [ 898.000 ]
+[ 898.000 ] - - P193 - - [ 911.000 ]
+[ 911.000 ] - - P014 - - [ 925.000 ]
+[ 925.000 ] - - P034 - - [ 939.000 ]
+[ 939.000 ] - - P054 - - [ 953.000 ]
+[ 953.000 ] - - P074 - - [ 967.000 ]
+[ 967.000 ] - - P094 - - [ 981.000 ]
+[ 981.000 ] - - P114 - - [ 995.000 ]
+[ 995.000 ] - - P134 - - [ 1009.000 ]
+[ 1009.000 ] - - P154 - - [ 1023.000 ]
+[ 1023.000 ] - - P174 - - [ 1037.000 ]
+[ 1037.000 ] - - P194 - - [ 1051.000 ]
+[ 1051.000 ] - - P015 - - [ 1066.000 ]
+[ 1066.000 ] - - P035 - - [ 1081.000 ]
+[ 1081.000 ] - - P055 - - [ 1096.000 ]
+[ 1096.000 ] - - P075 - - [ 1111.000 ]
+[ 1111.000 ] - - P095 - - [ 1126.000 ]
+[ 1126.000 ] - - P115 - - [ 1141.000 ]
+[ 1141.000 ] - - P135 - - [ 1156.000 ]
+[ 1156.000 ] - - P155 - - [ 1171.000 ]
+[ 1171.000 ] - - P175 - - [ 1186.000 ]
+[ 1186.000 ] - - P195 - - [ 1201.000 ]
+[ 1201.000 ] - - P016 - - [ 1217.000 ]
+[ 1217.000 ] - - P036 - - [ 1233.000 ]
+[ 1233.000 ] - - P056 - - [ 1249.000 ]
+[ 1249.000 ] - - P076 - - [ 1265.000 ]
+[ 1265.000 ] - - P096 - - [ 1281.000 ]
+[ 1281.000 ] - - P116 - - [ 1297.000 ]
+[ 1297.000 ] - - P136 - - [ 1313.000 ]
+[ 1313.000 ] - - P156 - - [ 1329.000 ]
+[ 1329.000 ] - - P176 - - [ 1345.000 ]
+[ 1345.000 ] - - P196 - - [ 1361.000 ]
+[ 1361.000 ] - - P017 - - [ 1378.000 ]
+[ 1378.000 ] - - P037 - - [ 1395.000 ]
+[ 1395.000 ] - - P057 - - [ 1412.000 ]
+[ 1412.000 ] - - P077 - - [ 1429.000 ]
+[ 1429.000 ] - - P097 - - [ 1446.000 ]
+[ 1446.000 ] - - P117 - - [ 1463.000 ]
+[ 1463.000 ] - - P137 - - [ 1480.000 ]
+[ 1480.000 ] - - P157 - - [ 1497.000 ]
+[ 1497.000 ] - - P177 - - [ 1514.000 ]
+[ 1514.000 ] - - P197 - - [ 1531.000 ]
+[ 1531.000 ] - - P018 - - [ 1549.000 ]
+[ 1549.000 ] - - P038 - - [ 1567.000 ]
+[ 1567.000 ] - - P058 - - [ 1585.000 ]
+[ 1585.000 ] - - P078 - - [ 1603.000 ]
+[ 1603.000 ] - - P098 - - [ 1621.000 ]
+[ 1621.000 ] - - P118 - - [ 1639.000 ]
+[ 1639.000 ] - - P138 - - [ 1657.000 ]
+[ 1657.000 ] - - P158 - - [ 1675.000 ]
+[ 1675.000 ] - - P178 - - [ 1693.000 ]
+[ 1693.000 ] - - P198 - - [ 1711.000 ]
+[ 1711.000 ] - - P019 - - [ 1730.000 ]
+[ 1730.000 ] - - P039 - - [ 1749.000 ]
+[ 1749.000 ] - - P059 - - [ 1768.000 ]
+[ 1768.000 ] - - P079 - - [ 1787.000 ]
+[ 1787.000 ] - - P099 - - [ 1806.000 ]
+[ 1806.000 ] - - P119 - - [ 1825.000 ]
+[ 1825.000 ] - - P139 - - [ 1844.000 ]
+[ 1844.000 ] - - P159 - - [ 1863.000 ]
+[ 1863.000 ] - - P179 - - [ 1882.000 ]
+[ 1882.000 ] - - P199 - - [ 1901.000 ]
+[ 1901.000 ] - - P020 - - [ 1921.000 ]
+[ 1921.000 ] - - P040 - - [ 1941.000 ]
+[ 1941.000 ] - - P060 - - [ 1961.000 ]
+[ 1961.000 ] - - P080 - - [ 1981.000 ]
+[ 1981.000 ] - - P100 - - [ 2001.000 ]
+[ 2001.000 ] - - P120 - - [ 2021.000 ]
+[ 2021.000 ] - - P140 - - [ 2041.000 ]
+[ 2041.000 ] - - P160 - - [ 2061.000 ]
+[ 2061.000 ] - - P180 - - [ 2081.000 ]
+[ 2081.000 ] - - P200 - - [ 2101.000 ]
+
+Bekleme Süreleri:
+Ortalama: 537.425
+Maksimum: 1863.000
+
+Turnaround Süreleri:
+Ortalama: 547.925
+Maksimum: 1883.000
+
+Throughput:
+T = 50 -> 11 islem tamamlandi
+T = 100 -> 22 islem tamamlandi
+T = 150 -> 32 islem tamamlandi
+T = 200 -> 42 islem tamamlandi
+
+CPU Verimliliği: 99.94%
+Toplam Context Switch: 199
+
+Prosesler:
+P001: arrival=0, burst=1, start=0.0, finish=1.0, waiting=0.0, turnaround=1.0
+P002: arrival=2, burst=2, start=2.0, finish=4.0, waiting=0.0, turnaround=2.0
+P003: arrival=4, burst=3, start=4.0, finish=7.0, waiting=0.0, turnaround=3.0
+P004: arrival=6, burst=4, start=7.0, finish=11.0, waiting=1.0, turnaround=5.0
+P005: arrival=8, burst=5, start=11.0, finish=16.0, waiting=3.0, turnaround=8.0
+P006: arrival=10, burst=6, start=16.0, finish=22.0, waiting=6.0, turnaround=12.0
+P007: arrival=12, burst=7, start=22.0, finish=29.0, waiting=10.0, turnaround=17.0
+P008: arrival=14, burst=8, start=29.0, finish=37.0, waiting=15.0, turnaround=23.0
+P009: arrival=16, burst=9, start=37.0, finish=46.0, waiting=21.0, turnaround=30.0
+P010: arrival=18, burst=10, start=451.0, finish=461.0, waiting=433.0, turnaround=443.0
+P011: arrival=20, burst=11, start=551.0, finish=562.0, waiting=531.0, turnaround=542.0
+P012: arrival=22, burst=12, start=661.0, finish=673.0, waiting=639.0, turnaround=651.0
+P013: arrival=24, burst=13, start=781.0, finish=794.0, waiting=757.0, turnaround=770.0
+P014: arrival=26, burst=14, start=911.0, finish=925.0, waiting=885.0, turnaround=899.0
+P015: arrival=28, burst=15, start=1051.0, finish=1066.0, waiting=1023.0, turnaround=1038.0
+P016: arrival=30, burst=16, start=1201.0, finish=1217.0, waiting=1171.0, turnaround=1187.0
+P017: arrival=32, burst=17, start=1361.0, finish=1378.0, waiting=1329.0, turnaround=1346.0
+P018: arrival=34, burst=18, start=1531.0, finish=1549.0, waiting=1497.0, turnaround=1515.0
+P019: arrival=36, burst=19, start=1711.0, finish=1730.0, waiting=1675.0, turnaround=1694.0
+P020: arrival=38, burst=20, start=1901.0, finish=1921.0, waiting=1863.0, turnaround=1883.0
+P021: arrival=40, burst=1, start=46.0, finish=47.0, waiting=6.0, turnaround=7.0
+P022: arrival=42, burst=2, start=47.0, finish=49.0, waiting=5.0, turnaround=7.0
+P023: arrival=44, burst=3, start=49.0, finish=52.0, waiting=5.0, turnaround=8.0
+P024: arrival=46, burst=4, start=52.0, finish=56.0, waiting=6.0, turnaround=10.0
+P025: arrival=48, burst=5, start=56.0, finish=61.0, waiting=8.0, turnaround=13.0
+P026: arrival=50, burst=6, start=61.0, finish=67.0, waiting=11.0, turnaround=17.0
+P027: arrival=52, burst=7, start=67.0, finish=74.0, waiting=15.0, turnaround=22.0
+P028: arrival=54, burst=8, start=74.0, finish=82.0, waiting=20.0, turnaround=28.0
+P029: arrival=56, burst=9, start=118.0, finish=127.0, waiting=62.0, turnaround=71.0
+P030: arrival=58, burst=10, start=461.0, finish=471.0, waiting=403.0, turnaround=413.0
+P031: arrival=60, burst=11, start=562.0, finish=573.0, waiting=502.0, turnaround=513.0
+P032: arrival=62, burst=12, start=673.0, finish=685.0, waiting=611.0, turnaround=623.0
+P033: arrival=64, burst=13, start=794.0, finish=807.0, waiting=730.0, turnaround=743.0
+P034: arrival=66, burst=14, start=925.0, finish=939.0, waiting=859.0, turnaround=873.0
+P035: arrival=68, burst=15, start=1066.0, finish=1081.0, waiting=998.0, turnaround=1013.0
+P036: arrival=70, burst=16, start=1217.0, finish=1233.0, waiting=1147.0, turnaround=1163.0
+P037: arrival=72, burst=17, start=1378.0, finish=1395.0, waiting=1306.0, turnaround=1323.0
+P038: arrival=74, burst=18, start=1549.0, finish=1567.0, waiting=1475.0, turnaround=1493.0
+P039: arrival=76, burst=19, start=1730.0, finish=1749.0, waiting=1654.0, turnaround=1673.0
+P040: arrival=78, burst=20, start=1921.0, finish=1941.0, waiting=1843.0, turnaround=1863.0
+P041: arrival=80, burst=1, start=82.0, finish=83.0, waiting=2.0, turnaround=3.0
+P042: arrival=82, burst=2, start=83.0, finish=85.0, waiting=1.0, turnaround=3.0
+P043: arrival=84, burst=3, start=85.0, finish=88.0, waiting=1.0, turnaround=4.0
+P044: arrival=86, burst=4, start=88.0, finish=92.0, waiting=2.0, turnaround=6.0
+P045: arrival=88, burst=5, start=92.0, finish=97.0, waiting=4.0, turnaround=9.0
+P046: arrival=90, burst=6, start=97.0, finish=103.0, waiting=7.0, turnaround=13.0
+P047: arrival=92, burst=7, start=103.0, finish=110.0, waiting=11.0, turnaround=18.0
+P048: arrival=94, burst=8, start=110.0, finish=118.0, waiting=16.0, turnaround=24.0
+P049: arrival=96, burst=9, start=199.0, finish=208.0, waiting=103.0, turnaround=112.0
+P050: arrival=98, burst=10, start=471.0, finish=481.0, waiting=373.0, turnaround=383.0
+P051: arrival=100, burst=11, start=573.0, finish=584.0, waiting=473.0, turnaround=484.0
+P052: arrival=102, burst=12, start=685.0, finish=697.0, waiting=583.0, turnaround=595.0
+P053: arrival=104, burst=13, start=807.0, finish=820.0, waiting=703.0, turnaround=716.0
+P054: arrival=106, burst=14, start=939.0, finish=953.0, waiting=833.0, turnaround=847.0
+P055: arrival=108, burst=15, start=1081.0, finish=1096.0, waiting=973.0, turnaround=988.0
+P056: arrival=110, burst=16, start=1233.0, finish=1249.0, waiting=1123.0, turnaround=1139.0
+P057: arrival=112, burst=17, start=1395.0, finish=1412.0, waiting=1283.0, turnaround=1300.0
+P058: arrival=114, burst=18, start=1567.0, finish=1585.0, waiting=1453.0, turnaround=1471.0
+P059: arrival=116, burst=19, start=1749.0, finish=1768.0, waiting=1633.0, turnaround=1652.0
+P060: arrival=118, burst=20, start=1941.0, finish=1961.0, waiting=1823.0, turnaround=1843.0
+P061: arrival=120, burst=1, start=127.0, finish=128.0, waiting=7.0, turnaround=8.0
+P062: arrival=122, burst=2, start=128.0, finish=130.0, waiting=6.0, turnaround=8.0
+P063: arrival=124, burst=3, start=130.0, finish=133.0, waiting=6.0, turnaround=9.0
+P064: arrival=126, burst=4, start=133.0, finish=137.0, waiting=7.0, turnaround=11.0
+P065: arrival=128, burst=5, start=137.0, finish=142.0, waiting=9.0, turnaround=14.0
+P066: arrival=130, burst=6, start=142.0, finish=148.0, waiting=12.0, turnaround=18.0
+P067: arrival=132, burst=7, start=148.0, finish=155.0, waiting=16.0, turnaround=23.0
+P068: arrival=134, burst=8, start=155.0, finish=163.0, waiting=21.0, turnaround=29.0
+P069: arrival=136, burst=9, start=281.0, finish=290.0, waiting=145.0, turnaround=154.0
+P070: arrival=138, burst=10, start=481.0, finish=491.0, waiting=343.0, turnaround=353.0
+P071: arrival=140, burst=11, start=584.0, finish=595.0, waiting=444.0, turnaround=455.0
+P072: arrival=142, burst=12, start=697.0, finish=709.0, waiting=555.0, turnaround=567.0
+P073: arrival=144, burst=13, start=820.0, finish=833.0, waiting=676.0, turnaround=689.0
+P074: arrival=146, burst=14, start=953.0, finish=967.0, waiting=807.0, turnaround=821.0
+P075: arrival=148, burst=15, start=1096.0, finish=1111.0, waiting=948.0, turnaround=963.0
+P076: arrival=150, burst=16, start=1249.0, finish=1265.0, waiting=1099.0, turnaround=1115.0
+P077: arrival=152, burst=17, start=1412.0, finish=1429.0, waiting=1260.0, turnaround=1277.0
+P078: arrival=154, burst=18, start=1585.0, finish=1603.0, waiting=1431.0, turnaround=1449.0
+P079: arrival=156, burst=19, start=1768.0, finish=1787.0, waiting=1612.0, turnaround=1631.0
+P080: arrival=158, burst=20, start=1961.0, finish=1981.0, waiting=1803.0, turnaround=1823.0
+P081: arrival=160, burst=1, start=163.0, finish=164.0, waiting=3.0, turnaround=4.0
+P082: arrival=162, burst=2, start=164.0, finish=166.0, waiting=2.0, turnaround=4.0
+P083: arrival=164, burst=3, start=166.0, finish=169.0, waiting=2.0, turnaround=5.0
+P084: arrival=166, burst=4, start=169.0, finish=173.0, waiting=3.0, turnaround=7.0
+P085: arrival=168, burst=5, start=173.0, finish=178.0, waiting=5.0, turnaround=10.0
+P086: arrival=170, burst=6, start=178.0, finish=184.0, waiting=8.0, turnaround=14.0
+P087: arrival=172, burst=7, start=184.0, finish=191.0, waiting=12.0, turnaround=19.0
+P088: arrival=174, burst=8, start=191.0, finish=199.0, waiting=17.0, turnaround=25.0
+P089: arrival=176, burst=9, start=397.0, finish=406.0, waiting=221.0, turnaround=230.0
+P090: arrival=178, burst=10, start=491.0, finish=501.0, waiting=313.0, turnaround=323.0
+P091: arrival=180, burst=11, start=595.0, finish=606.0, waiting=415.0, turnaround=426.0
+P092: arrival=182, burst=12, start=709.0, finish=721.0, waiting=527.0, turnaround=539.0
+P093: arrival=184, burst=13, start=833.0, finish=846.0, waiting=649.0, turnaround=662.0
+P094: arrival=186, burst=14, start=967.0, finish=981.0, waiting=781.0, turnaround=795.0
+P095: arrival=188, burst=15, start=1111.0, finish=1126.0, waiting=923.0, turnaround=938.0
+P096: arrival=190, burst=16, start=1265.0, finish=1281.0, waiting=1075.0, turnaround=1091.0
+P097: arrival=192, burst=17, start=1429.0, finish=1446.0, waiting=1237.0, turnaround=1254.0
+P098: arrival=194, burst=18, start=1603.0, finish=1621.0, waiting=1409.0, turnaround=1427.0
+P099: arrival=196, burst=19, start=1787.0, finish=1806.0, waiting=1591.0, turnaround=1610.0
+P100: arrival=198, burst=20, start=1981.0, finish=2001.0, waiting=1783.0, turnaround=1803.0
+P101: arrival=200, burst=1, start=208.0, finish=209.0, waiting=8.0, turnaround=9.0
+P102: arrival=202, burst=2, start=209.0, finish=211.0, waiting=7.0, turnaround=9.0
+P103: arrival=204, burst=3, start=211.0, finish=214.0, waiting=7.0, turnaround=10.0
+P104: arrival=206, burst=4, start=214.0, finish=218.0, waiting=8.0, turnaround=12.0
+P105: arrival=208, burst=5, start=218.0, finish=223.0, waiting=10.0, turnaround=15.0
+P106: arrival=210, burst=6, start=223.0, finish=229.0, waiting=13.0, turnaround=19.0
+P107: arrival=212, burst=7, start=229.0, finish=236.0, waiting=17.0, turnaround=24.0
+P108: arrival=214, burst=8, start=236.0, finish=244.0, waiting=22.0, turnaround=30.0
+P109: arrival=216, burst=9, start=406.0, finish=415.0, waiting=190.0, turnaround=199.0
+P110: arrival=218, burst=10, start=501.0, finish=511.0, waiting=283.0, turnaround=293.0
+P111: arrival=220, burst=11, start=606.0, finish=617.0, waiting=386.0, turnaround=397.0
+P112: arrival=222, burst=12, start=721.0, finish=733.0, waiting=499.0, turnaround=511.0
+P113: arrival=224, burst=13, start=846.0, finish=859.0, waiting=622.0, turnaround=635.0
+P114: arrival=226, burst=14, start=981.0, finish=995.0, waiting=755.0, turnaround=769.0
+P115: arrival=228, burst=15, start=1126.0, finish=1141.0, waiting=898.0, turnaround=913.0
+P116: arrival=230, burst=16, start=1281.0, finish=1297.0, waiting=1051.0, turnaround=1067.0
+P117: arrival=232, burst=17, start=1446.0, finish=1463.0, waiting=1214.0, turnaround=1231.0
+P118: arrival=234, burst=18, start=1621.0, finish=1639.0, waiting=1387.0, turnaround=1405.0
+P119: arrival=236, burst=19, start=1806.0, finish=1825.0, waiting=1570.0, turnaround=1589.0
+P120: arrival=238, burst=20, start=2001.0, finish=2021.0, waiting=1763.0, turnaround=1783.0
+P121: arrival=240, burst=1, start=244.0, finish=245.0, waiting=4.0, turnaround=5.0
+P122: arrival=242, burst=2, start=245.0, finish=247.0, waiting=3.0, turnaround=5.0
+P123: arrival=244, burst=3, start=247.0, finish=250.0, waiting=3.0, turnaround=6.0
+P124: arrival=246, burst=4, start=250.0, finish=254.0, waiting=4.0, turnaround=8.0
+P125: arrival=248, burst=5, start=254.0, finish=259.0, waiting=6.0, turnaround=11.0
+P126: arrival=250, burst=6, start=259.0, finish=265.0, waiting=9.0, turnaround=15.0
+P127: arrival=252, burst=7, start=265.0, finish=272.0, waiting=13.0, turnaround=20.0
+P128: arrival=254, burst=8, start=272.0, finish=280.0, waiting=18.0, turnaround=26.0
+P129: arrival=256, burst=9, start=415.0, finish=424.0, waiting=159.0, turnaround=168.0
+P130: arrival=258, burst=10, start=511.0, finish=521.0, waiting=253.0, turnaround=263.0
+P131: arrival=260, burst=11, start=617.0, finish=628.0, waiting=357.0, turnaround=368.0
+P132: arrival=262, burst=12, start=733.0, finish=745.0, waiting=471.0, turnaround=483.0
+P133: arrival=264, burst=13, start=859.0, finish=872.0, waiting=595.0, turnaround=608.0
+P134: arrival=266, burst=14, start=995.0, finish=1009.0, waiting=729.0, turnaround=743.0
+P135: arrival=268, burst=15, start=1141.0, finish=1156.0, waiting=873.0, turnaround=888.0
+P136: arrival=270, burst=16, start=1297.0, finish=1313.0, waiting=1027.0, turnaround=1043.0
+P137: arrival=272, burst=17, start=1463.0, finish=1480.0, waiting=1191.0, turnaround=1208.0
+P138: arrival=274, burst=18, start=1639.0, finish=1657.0, waiting=1365.0, turnaround=1383.0
+P139: arrival=276, burst=19, start=1825.0, finish=1844.0, waiting=1549.0, turnaround=1568.0
+P140: arrival=278, burst=20, start=2021.0, finish=2041.0, waiting=1743.0, turnaround=1763.0
+P141: arrival=280, burst=1, start=280.0, finish=281.0, waiting=0.0, turnaround=1.0
+P142: arrival=282, burst=2, start=290.0, finish=292.0, waiting=8.0, turnaround=10.0
+P143: arrival=284, burst=3, start=292.0, finish=295.0, waiting=8.0, turnaround=11.0
+P144: arrival=286, burst=4, start=295.0, finish=299.0, waiting=9.0, turnaround=13.0
+P145: arrival=288, burst=5, start=299.0, finish=304.0, waiting=11.0, turnaround=16.0
+P146: arrival=290, burst=6, start=304.0, finish=310.0, waiting=14.0, turnaround=20.0
+P147: arrival=292, burst=7, start=310.0, finish=317.0, waiting=18.0, turnaround=25.0
+P148: arrival=294, burst=8, start=317.0, finish=325.0, waiting=23.0, turnaround=31.0
+P149: arrival=296, burst=9, start=424.0, finish=433.0, waiting=128.0, turnaround=137.0
+P150: arrival=298, burst=10, start=521.0, finish=531.0, waiting=223.0, turnaround=233.0
+P151: arrival=300, burst=11, start=628.0, finish=639.0, waiting=328.0, turnaround=339.0
+P152: arrival=302, burst=12, start=745.0, finish=757.0, waiting=443.0, turnaround=455.0
+P153: arrival=304, burst=13, start=872.0, finish=885.0, waiting=568.0, turnaround=581.0
+P154: arrival=306, burst=14, start=1009.0, finish=1023.0, waiting=703.0, turnaround=717.0
+P155: arrival=308, burst=15, start=1156.0, finish=1171.0, waiting=848.0, turnaround=863.0
+P156: arrival=310, burst=16, start=1313.0, finish=1329.0, waiting=1003.0, turnaround=1019.0
+P157: arrival=312, burst=17, start=1480.0, finish=1497.0, waiting=1168.0, turnaround=1185.0
+P158: arrival=314, burst=18, start=1657.0, finish=1675.0, waiting=1343.0, turnaround=1361.0
+P159: arrival=316, burst=19, start=1844.0, finish=1863.0, waiting=1528.0, turnaround=1547.0
+P160: arrival=318, burst=20, start=2041.0, finish=2061.0, waiting=1723.0, turnaround=1743.0
+P161: arrival=320, burst=1, start=325.0, finish=326.0, waiting=5.0, turnaround=6.0
+P162: arrival=322, burst=2, start=326.0, finish=328.0, waiting=4.0, turnaround=6.0
+P163: arrival=324, burst=3, start=328.0, finish=331.0, waiting=4.0, turnaround=7.0
+P164: arrival=326, burst=4, start=331.0, finish=335.0, waiting=5.0, turnaround=9.0
+P165: arrival=328, burst=5, start=335.0, finish=340.0, waiting=7.0, turnaround=12.0
+P166: arrival=330, burst=6, start=340.0, finish=346.0, waiting=10.0, turnaround=16.0
+P167: arrival=332, burst=7, start=346.0, finish=353.0, waiting=14.0, turnaround=21.0
+P168: arrival=334, burst=8, start=353.0, finish=361.0, waiting=19.0, turnaround=27.0
+P169: arrival=336, burst=9, start=433.0, finish=442.0, waiting=97.0, turnaround=106.0
+P170: arrival=338, burst=10, start=531.0, finish=541.0, waiting=193.0, turnaround=203.0
+P171: arrival=340, burst=11, start=639.0, finish=650.0, waiting=299.0, turnaround=310.0
+P172: arrival=342, burst=12, start=757.0, finish=769.0, waiting=415.0, turnaround=427.0
+P173: arrival=344, burst=13, start=885.0, finish=898.0, waiting=541.0, turnaround=554.0
+P174: arrival=346, burst=14, start=1023.0, finish=1037.0, waiting=677.0, turnaround=691.0
+P175: arrival=348, burst=15, start=1171.0, finish=1186.0, waiting=823.0, turnaround=838.0
+P176: arrival=350, burst=16, start=1329.0, finish=1345.0, waiting=979.0, turnaround=995.0
+P177: arrival=352, burst=17, start=1497.0, finish=1514.0, waiting=1145.0, turnaround=1162.0
+P178: arrival=354, burst=18, start=1675.0, finish=1693.0, waiting=1321.0, turnaround=1339.0
+P179: arrival=356, burst=19, start=1863.0, finish=1882.0, waiting=1507.0, turnaround=1526.0
+P180: arrival=358, burst=20, start=2061.0, finish=2081.0, waiting=1703.0, turnaround=1723.0
+P181: arrival=360, burst=1, start=361.0, finish=362.0, waiting=1.0, turnaround=2.0
+P182: arrival=362, burst=2, start=362.0, finish=364.0, waiting=0.0, turnaround=2.0
+P183: arrival=364, burst=3, start=364.0, finish=367.0, waiting=0.0, turnaround=3.0
+P184: arrival=366, burst=4, start=367.0, finish=371.0, waiting=1.0, turnaround=5.0
+P185: arrival=368, burst=5, start=371.0, finish=376.0, waiting=3.0, turnaround=8.0
+P186: arrival=370, burst=6, start=376.0, finish=382.0, waiting=6.0, turnaround=12.0
+P187: arrival=372, burst=7, start=382.0, finish=389.0, waiting=10.0, turnaround=17.0
+P188: arrival=374, burst=8, start=389.0, finish=397.0, waiting=15.0, turnaround=23.0
+P189: arrival=376, burst=9, start=442.0, finish=451.0, waiting=66.0, turnaround=75.0
+P190: arrival=378, burst=10, start=541.0, finish=551.0, waiting=163.0, turnaround=173.0
+P191: arrival=380, burst=11, start=650.0, finish=661.0, waiting=270.0, turnaround=281.0
+P192: arrival=382, burst=12, start=769.0, finish=781.0, waiting=387.0, turnaround=399.0
+P193: arrival=384, burst=13, start=898.0, finish=911.0, waiting=514.0, turnaround=527.0
+P194: arrival=386, burst=14, start=1037.0, finish=1051.0, waiting=651.0, turnaround=665.0
+P195: arrival=388, burst=15, start=1186.0, finish=1201.0, waiting=798.0, turnaround=813.0
+P196: arrival=390, burst=16, start=1345.0, finish=1361.0, waiting=955.0, turnaround=971.0
+P197: arrival=392, burst=17, start=1514.0, finish=1531.0, waiting=1122.0, turnaround=1139.0
+P198: arrival=394, burst=18, start=1693.0, finish=1711.0, waiting=1299.0, turnaround=1317.0
+P199: arrival=396, burst=19, start=1882.0, finish=1901.0, waiting=1486.0, turnaround=1505.0
+P200: arrival=398, burst=20, start=2081.0, finish=2101.0, waiting=1683.0, turnaround=1703.0
